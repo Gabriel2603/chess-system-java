@@ -41,7 +41,11 @@ public class Program {
 
                 if (chessMatch.getPromoted() != null) {
                     System.out.print("Entre com a peca para promocao ( B / C / T / R ): ");
-                    String type = sc.nextLine();
+                    String type = sc.nextLine().toUpperCase();
+                    while (!type.equals("B") && !type.equals("C") && !type.equals("T") && !type.equals("R")) {
+                        System.out.print("Valor invalido! \nDigite a peca para promocao ( B / C / T / R ): ");
+                        type = sc.nextLine().toUpperCase();
+                    }
                     chessMatch.replacePromotedPiece(type);
                 }
 
