@@ -9,7 +9,7 @@ public class ChessPosition {
 
     public ChessPosition(char column, int row) {
         if (column < 'a' || column > 'h' || row < 1 || row > 8) {
-            throw new ChessException("Erro ao instanciar ChessPosition. Os valores validos são de a1 a h8.");
+            throw new ChessException("Erro ao instanciar ChessPosition. Os valores validos sao de a1 a h8.");
         }
         this.column = column;
         this.row = row;
@@ -28,7 +28,7 @@ public class ChessPosition {
     }
 
     protected static ChessPosition fromPosition(Position position) {
-        return new ChessPosition((char)('a' - position.getColumn()), 8 - position.getRow());
+        return new ChessPosition((char)('a' + position.getColumn()), 8 - position.getRow());
     }
 
     @Override
