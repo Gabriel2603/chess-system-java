@@ -43,7 +43,7 @@ public class UI {
             return new ChessPosition(column, row);
         }
         catch (RuntimeException e) {
-            throw new InputMismatchException("Error instantiating ChessPosition. Valid values are from a1 to h8.");
+            throw new InputMismatchException("Erro ao instanciar ChessPosition. Os valores validos são de a1 a h8.");
         }
     }
 

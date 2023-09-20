@@ -49,16 +49,16 @@ public class ChessMatch {
 
     private void validateSourcePosition(Position position) {
         if (!board.thereIsAPiece(position)) {
-            throw new ChessException("There is no piece on source position");
+            throw new ChessException("Nao ha nenhuma peca na posicao de origem");
         }
         if (!board.piece(position).isTherePossibleMove()) {
-            throw new ChessException("There is no possible moves for the chosen piece");
+            throw new ChessException("Nao ha movimentos possiveis para a peca escolhida");
         }
     }
 
     private void validateTargetPosition(Position source, Position target) {
         if (!board.piece(source).possibleMove(target)) {
-            throw new ChessException("The chosen piece can't move to target position");
+            throw new ChessException("A peca escolhida nao pode se mover para a posicao alvo");
         }
     }
 
